@@ -19,6 +19,14 @@ class Linkedlist:
                 lastnode = lastnode.next
             lastnode.next = ele
 
+    def length(self):
+        lastnode = self.head
+        count = 0
+        while lastnode.next is not None:
+            lastnode = lastnode.next
+            count += 1
+            
+        print(count)
     def printlist(self):
         currentnode = self.head
         while True:
@@ -36,3 +44,4 @@ lis.insertend(first_ele)
 lis.insertend(second_ele)
 lis.insertend(third_ele)
 lis.printlist()
+lis.length()
