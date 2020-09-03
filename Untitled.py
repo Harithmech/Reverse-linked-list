@@ -37,6 +37,21 @@ class LinkedList:
         ele.next = temp
         del temp
 
+    def insertnodeat(self, ele, index):
+        if index == 0:
+            self.addheadnode(ele)
+            return
+        currentnode = self.head
+        currentposition = 0
+        while True:
+            if currentposition == index:
+                previousnode.next = ele
+                ele.next = currentnode        
+                break
+            previousnode = currentnode
+            currentnode = currentnode.next
+            currentposition += 1
+        
 first_ele = Node("harith")
 second_ele = Node("harshith")
 third_ele = Node("shubha")
@@ -48,6 +63,6 @@ link.append(first_ele)
 link.append(second_ele)
 link.append(third_ele)
 link.append(fourth_ele)
-link.addheadnode(zeroth_ele)
+link.insertnodeat(zeroth_ele, i+1 for i in range(3))
 link.printlist()
 
