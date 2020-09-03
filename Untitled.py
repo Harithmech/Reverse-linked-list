@@ -51,6 +51,15 @@ class LinkedList:
             previousnode = currentnode
             currentnode = currentnode.next
             currentposition += 1
+
+    def delnode(self):
+        currentnode = self.head
+        if currentnode.next is None:
+            print("no elements")
+        else:
+            temp = currentnode
+            currentnode.next = None
+            del temp
         
 first_ele = Node("harith")
 second_ele = Node("harshith")
@@ -63,6 +72,7 @@ link.append(first_ele)
 link.append(second_ele)
 link.append(third_ele)
 link.append(fourth_ele)
-link.insertnodeat(zeroth_ele, i+1 for i in range(3))
+link.insertnodeat(zeroth_ele, 3)
+link.delnode()
 link.printlist()
 
